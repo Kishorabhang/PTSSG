@@ -217,32 +217,62 @@
     <p>नमो बुद्धाय🙏</p>
         <p>&copy; 2025 पंचशिल तरूण सेवा संघ-गिरवली. सर्व हक्क राखीव.</p>
     </footer>
-</body>
-</html>
-<script>
-</script>
- <button onclick="toggleShareMenu()" class="share-btn">
-        📤 रोशर करा
-    </button>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शेअर करा</title>
+    <style>
+        .share-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-    <div id="share-menu">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kishorabhang.github.io/PTSSG/" target="_blank">Facebook</a>
-        <a href="https://twitter.com/intent/tweet?url=https://kishorabhang.github.io/PTSSG/" target="_blank">Twitter</a>
-        <a href="https://api.whatsapp.com/send?text=https://kishorabhang.github.io/PTSSG/" target="_blank">WhatsApp</a>
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .share-btn img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="share-container">
+        <button class="share-btn" onclick="shareOnFacebook()">
+            <img src="images/facebook.png" alt="Facebook">
+        </button>
+        <button class="share-btn" onclick="shareOnTwitter()">
+            <img src="images/twitter.png" alt="Twitter">
+        </button>
+        <button class="share-btn" onclick="shareOnWhatsApp()">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+        </button>
     </div>
 
     <script>
-        function toggleShareMenu() {
-            var menu = document.getElementById("share-menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
+        function shareOnFacebook() {
+            var url = encodeURIComponent(window.location.href);
+            window.open("https://www.facebook.com/sharer/sharer.php?u=" + url, "_blank");
+        }
+
+        function shareOnTwitter() {
+            var url = encodeURIComponent(window.location.href);
+            window.open("https://twitter.com/intent/tweet?url=" + url, "_blank");
+        }
+
+        function shareOnWhatsApp() {
+            var url = encodeURIComponent(window.location.href);
+            window.open("https://api.whatsapp.com/send?text=" + url, "_blank");
         }
     </script>
 
 </body>
 </html>
-
-
