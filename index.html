@@ -221,32 +221,28 @@
 </html>
 <script>
 </script>
-<button onclick="toggleShareMenu()" class="share-btn">
-    📤 रोशर करा
-</button>
+ <button onclick="toggleShareMenu()" class="share-btn">
+        📤 रोशर करा
+    </button>
 
-<div id="share-menu" class="share-menu">
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://kishorabhang.github.io/PTSSG/" target="_blank">Facebook</a>
-    <a href="https://twitter.com/intent/tweet?url=https://kishorabhang.github.io/PTSSG/" target="_blank">Twitter</a>
-    <a href="https://api.whatsapp.com/send?text=https://kishorabhang.github.io/PTSSG/" target="_blank">WhatsApp</a>
-</div>
+    <div id="share-menu">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kishorabhang.github.io/PTSSG/" target="_blank">Facebook</a>
+        <a href="https://twitter.com/intent/tweet?url=https://kishorabhang.github.io/PTSSG/" target="_blank">Twitter</a>
+        <a href="https://api.whatsapp.com/send?text=https://kishorabhang.github.io/PTSSG/" target="_blank">WhatsApp</a>
+    </div>
 
-<style>
-    .share-button {
-        display: inline-block;
-        background-color: #25D366;
-        color: white;
-        padding: 15px 30px;
-        font-size: 18px;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 20px;
-        border: none;
-        cursor: pointer;
-    }
-    .share-button:hover {
-        background-color: #1EBE5D;
-    }
-</style>
+    <script>
+        function toggleShareMenu() {
+            var menu = document.getElementById("share-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
 
 
