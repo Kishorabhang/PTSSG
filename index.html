@@ -3,445 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>पंचशिल तरूण सेवा संघ-गिरवली</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        header, footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .gallery img, .image-container img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        .swiper {
-            width: 80%;
-            height: 400px;
-            margin: auto;
-            border-radius: 10px;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .donate-button {
-            background-color: #ff6600;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: inline-block;
-        }
-        .donate-button:hover {
-            background-color: #cc5500;
-        }
-        table {
-            width: 50%;
-            margin: auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <title>पंचशील तरुण सेवा संघ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>पंचशिल तरूण सेवा संघ-गिरवली</h1>
-        <p>(Reg No.MAH/1100/2023 Pune)</p>
+        <h1>पंचशील तरुण सेवा संघ</h1>
+        <img src="buddha.jpg" alt="गौतम बुद्ध">
+        <img src="ambedkar.jpg" alt="बाबासाहेब आंबेडकर">
     </header>
-
-    <section class="image-container">
-        <img src="images/babasaheb_ambedkar.jpg" alt="डॉ. बाबासाहेब आंबेडकर">
-        <img src="images/gautam_buddha.jpg" alt="गौतम बुद्ध">
+    
+    <nav>
+        <ul>
+            <li><a href="#about">आमच्याबद्दल</a></li>
+            <li><a href="#services">सेवा</a></li>
+            <li><a href="#gallery">गॅलरी</a></li>
+            <li><a href="#donate">देणगी</a></li>
+            <li><a href="#contact">संपर्क</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <h2>आमच्याबद्दल</h2>
+        <p>पंचशील तरुण सेवा संघ सामाजिक, शैक्षणिक आणि धार्मिक कार्यांसाठी कार्यरत आहे.</p>
     </section>
-
-    <section>
-        <h2>संघाची माहिती</h2>
-        <p>पंचशिल तरूण सेवा संघ-गिरवली सामाजिक व धार्मिक उपक्रम राबवणारी संस्था आहे.</p>
+    
+    <section id="services">
+        <h2>आमच्या सेवा</h2>
+        <ul>
+            <li>शैक्षणिक मदत</li>
+            <li>आरोग्य शिबिरे</li>
+            <li>सामाजिक उपक्रम</li>
+        </ul>
     </section>
-
-    <section>
-        <h2>फोटो गॅलरी</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/PHOTO1.jpg"></div>
-                <div class="swiper-slide"><img src="images/PHOTO2.jpg"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+    
+    <section id="gallery">
+        <h2>गॅलरी</h2>
+        <div class="gallery">
+            <img src="event1.jpg" alt="कार्यक्रम १">
+            <img src="event2.jpg" alt="कार्यक्रम २">
+            <img src="event3.jpg" alt="कार्यक्रम ३">
+            <img src="event4.jpg" alt="कार्यक्रम ४">
         </div>
     </section>
-
-    <section>
-        <h2>सभासद देणगी यादी</h2>
-        <table>
-            <thead>
-                <tr><th>सभासदाचे नाव</th><th>रक्कम (₹)</th></tr>
-            </thead>
-            <tbody id="donationList"></tbody>
-        </table>
-        <input type="text" id="nameInput" placeholder="सभासदाचे नाव">
-        <input type="number" id="amountInput" placeholder="रक्कम (₹)">
-        <button onclick="addDonation()">जोडा</button>
+    
+    <section id="donate">
+        <h2>देणगी द्या</h2>
+        <p>आपल्या योगदानाने आमचे सामाजिक कार्य अधिक प्रभावी होईल.</p>
+        <a href="upi://pay?pa=your-upi-id@upi&pn=PanchaSheelTrust" class="donate-button">देणगी द्या</a>
     </section>
-
-    <section>
-        <h2>बुद्ध विहार निधी संकलन</h2>
-        <p>बुद्ध विहार व स्तूप बांधण्यासाठी निधी संकलन सुरू आहे.</p>
-        <a href="#" class="donate-button">आता देणगी द्या</a>
+    
+    <section id="contact">
+        <h2>संपर्क</h2>
+        <p>Email: contact@panchaSheelTrust.org</p>
+        <p>Phone: 9876543210</p>
     </section>
-
+    
     <footer>
-        <p>&copy; 2025 पंचशिल तरूण सेवा संघ-गिरवली. सर्व हक्क राखीव.</p>
+        <p>&copy; 2025 पंचशील तरुण सेवा संघ. सर्व हक्क राखीव.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: { delay: 2500, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
-        });
-        function addDonation() {
-            let name = document.getElementById("nameInput").value;
-            let amount = document.getElementById("amountInput").value;
-            if (name && amount) {
-                let table = document.getElementById("donationList");
-                let newRow = table.insertRow();
-                newRow.insertCell(0).innerHTML = name;
-                newRow.insertCell(1).innerHTML = "₹ " + amount;
-                document.getElementById("nameInput").value = "";
-                document.getElementById("amountInput").value = "";
-            } else {
-                alert("कृपया नाव आणि रक्कम भरा!");
-            }
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="mr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>पंचशिल तरूण सेवा संघ-गिरवली</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        header, footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .gallery img, .image-container img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        .swiper {
-            width: 80%;
-            height: 400px;
-            margin: auto;
-            border-radius: 10px;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .donate-button {
-            background-color: #ff6600;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: inline-block;
-        }
-        .donate-button:hover {
-            background-color: #cc5500;
-        }
-        table {
-            width: 50%;
-            margin: auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>पंचशिल तरूण सेवा संघ-गिरवली</h1>
-        <p>(Reg No.MAH/1100/2023 Pune)</p>
-    </header>
-
-    <section class="image-container">
-        <img src="images/babasaheb_ambedkar.jpg" alt="डॉ. बाबासाहेब आंबेडकर">
-        <img src="images/gautam_buddha.jpg" alt="गौतम बुद्ध">
-    </section>
-
-    <section>
-        <h2>संघाची माहिती</h2>
-        <p>पंचशिल तरूण सेवा संघ-गिरवली सामाजिक व धार्मिक उपक्रम राबवणारी संस्था आहे.</p>
-    </section>
-
-    <section>
-        <h2>फोटो गॅलरी</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/PHOTO1.jpg"></div>
-                <div class="swiper-slide"><img src="images/PHOTO2.jpg"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-
-    <section>
-        <h2>सभासद देणगी यादी</h2>
-        <table>
-            <thead>
-                <tr><th>सभासदाचे नाव</th><th>रक्कम (₹)</th></tr>
-            </thead>
-            <tbody id="donationList"></tbody>
-        </table>
-        <input type="text" id="nameInput" placeholder="सभासदाचे नाव">
-        <input type="number" id="amountInput" placeholder="रक्कम (₹)">
-        <button onclick="addDonation()">जोडा</button>
-    </section>
-
-    <section>
-        <h2>बुद्ध विहार निधी संकलन</h2>
-        <p>बुद्ध विहार व स्तूप बांधण्यासाठी निधी संकलन सुरू आहे.</p>
-        <a href="#" class="donate-button">आता देणगी द्या</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 पंचशिल तरूण सेवा संघ-गिरवली. सर्व हक्क राखीव.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: { delay: 2500, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
-        });
-        function addDonation() {
-            let name = document.getElementById("nameInput").value;
-            let amount = document.getElementById("amountInput").value;
-            if (name && amount) {
-                let table = document.getElementById("donationList");
-                let newRow = table.insertRow();
-                newRow.insertCell(0).innerHTML = name;
-                newRow.insertCell(1).innerHTML = "₹ " + amount;
-                document.getElementById("nameInput").value = "";
-                document.getElementById("amountInput").value = "";
-            } else {
-                alert("कृपया नाव आणि रक्कम भरा!");
-            }
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="mr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>पंचशिल तरूण सेवा संघ-गिरवली</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        header, footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .gallery img, .image-container img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        .swiper {
-            width: 80%;
-            height: 400px;
-            margin: auto;
-            border-radius: 10px;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .donate-button {
-            background-color: #ff6600;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: inline-block;
-        }
-        .donate-button:hover {
-            background-color: #cc5500;
-        }
-        table {
-            width: 50%;
-            margin: auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>पंचशिल तरूण सेवा संघ-गिरवली</h1>
-        <p>(Reg No.MAH/1100/2023 Pune)</p>
-    </header>
-
-    <section class="image-container">
-        <img src="images/babasaheb_ambedkar.jpg" alt="डॉ. बाबासाहेब आंबेडकर">
-        <img src="images/gautam_buddha.jpg" alt="गौतम बुद्ध">
-    </section>
-
-    <section>
-        <h2>संघाची माहिती</h2>
-        <p>पंचशिल तरूण सेवा संघ-गिरवली सामाजिक व धार्मिक उपक्रम राबवणारी संस्था आहे.</p>
-    </section>
-
-    <section>
-        <h2>फोटो गॅलरी</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/PHOTO1.jpg"></div>
-                <div class="swiper-slide"><img src="images/PHOTO2.jpg"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-
-    <section>
-        <h2>सभासद देणगी यादी</h2>
-        <table>
-            <thead>
-                <tr><th>सभासदाचे नाव</th><th>रक्कम (₹)</th></tr>
-            </thead>
-            <tbody id="donationList"></tbody>
-        </table>
-        <input type="text" id="nameInput" placeholder="सभासदाचे नाव">
-        <input type="number" id="amountInput" placeholder="रक्कम (₹)">
-        <button onclick="addDonation()">जोडा</button>
-    </section>
-
-    <section>
-        <h2>बुद्ध विहार निधी संकलन</h2>
-        <p>बुद्ध विहार व स्तूप बांधण्यासाठी निधी संकलन सुरू आहे.</p>
-        <a href="#" class="donate-button">आता देणगी द्या</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 पंचशिल तरूण सेवा संघ-गिरवली. सर्व हक्क राखीव.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: { delay: 2500, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
-        });
-        function addDonation() {
-            let name = document.getElementById("nameInput").value;
-            let amount = document.getElementById("amountInput").value;
-            if (name && amount) {
-                let table = document.getElementById("donationList");
-                let newRow = table.insertRow();
-                newRow.insertCell(0).innerHTML = name;
-                newRow.insertCell(1).innerHTML = "₹ " + amount;
-                document.getElementById("nameInput").value = "";
-                document.getElementById("amountInput").value = "";
-            } else {
-                alert("कृपया नाव आणि रक्कम भरा!");
-            }
-        }
-    </script>
 </body>
 </html>
