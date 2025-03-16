@@ -195,6 +195,78 @@
             background: #003366;
             color: white;
         }
+        <!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सभासद देणगी यादी</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>सभासद देणगी यादी</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>सभासदाचे नाव</th>
+                <th>जमा रक्कम (₹)</th>
+            </tr>
+        </thead>
+        <tbody id="donationList">
+            <!-- येथे डायनॅमिक डेटा दिसेल -->
+        </tbody>
+    </table>
+
+    <h3>नवीन देणगी जोडा</h3>
+    <input type="text" id="nameInput" placeholder="सभासदाचे नाव">
+    <input type="number" id="amountInput" placeholder="रक्कम (₹)">
+    <button onclick="addDonation()">जोडा</button>
+
+    <script>
+        function addDonation() {
+            let name = document.getElementById("nameInput").value;
+            let amount = document.getElementById("amountInput").value;
+
+            if(name && amount) {
+                let table = document.getElementById("donationList");
+                let newRow = table.insertRow();
+                let cell1 = newRow.insertCell(0);
+                let cell2 = newRow.insertCell(1);
+                
+                cell1.innerHTML = name;
+                cell2.innerHTML = "₹ " + amount;
+
+                document.getElementById("nameInput").value = "";
+                document.getElementById("amountInput").value = "";
+            } else {
+                alert("कृपया नाव आणि रक्कम भरा!");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
     </style>
     #share-menu a {
     color: white !important; /* नावांचा रंग पांढरा करण्यासाठी */
