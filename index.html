@@ -208,16 +208,13 @@
     <section>
         <h2>आपले योगदान महत्वाचे आहे!</h2>
         <p>बौद्ध समाजासाठी ध्यान केंद्र, ग्रंथालय, आणि शांततेसाठी एक पवित्र स्थान उभारण्याचा आमचा संकल्प आहे.</p>
-        <a href="#" class="donate-button">आता देणगी द्या</a>
-    </section>
+            </section>
     <footer><footer>
     <p>सब्ब दानं धम्म दानं जिनाति।।</p>
     <p>सर्व दाना मध्ये धम्म दान हे सर्वश्रेष्ठ दान आहे।।</p>
     <p>🪷🪷🪷</p>
     <p>नमो बुद्धाय🙏</p>
-        <p>&copy; 2025 पंचशिल तरूण सेवा संघ-गिरवली. सर्व हक्क राखीव.</p>
-    </footer>
-<html lang="mr">
+       <html lang="mr">
 <head>
     <button onclick="toggleShareMenu()" class="share-btn">
         📤 शेअर करा
@@ -276,7 +273,7 @@
     </section>
     
     <section id="donate">
-        <h2>देणगी द्या</h2>
+       <a href="#" class="donate-button">आता देणगी द्या</a>
         <p>आपल्या योगदानाने आमचे सामाजिक कार्य अधिक प्रभावी होईल.</p>
         <a href="upi://pay?pa=your-upi-id@upi&pn=PanchaSheelTrust" class="donate-button">देणगी द्या</a>
         </section>
@@ -306,35 +303,5 @@
                 alert("कृपया नाव आणि रक्कम भरा!");
             }
         }
-    </script>
-</body>
-</html>
-    <footer>
-        <p>&copy; 2025 पंचशिल तरूण सेवा संघ-गिरवली. सर्व हक्क राखीव.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: { delay: 2500, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
-        });
-        function addDonation() {
-            let name = document.getElementById("nameInput").value;
-            let amount = document.getElementById("amountInput").value;
-            if (name && amount) {
-                let table = document.getElementById("donationList");
-                let newRow = table.insertRow();
-                newRow.insertCell(0).innerHTML = name;
-                newRow.insertCell(1).innerHTML = "₹ " + amount;
-                document.getElementById("nameInput").value = "";
-                document.getElementById("amountInput").value = "";
-            } else {
-                alert("कृपया नाव आणि रक्कम भरा!");
-            }
-        }
-    </script>
-</body>
+   </body>
 </html>
